@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="@string/restart"
+        android:id="@+id/restart"
+        android:icon="@drawable/ic_action_restart"
+        app:showAsAction="always"/>
+
+    <item
+        android:title="@string/undo_move"
+        android:id="@+id/undo_move"
+        android:icon="@drawable/ic_action_undo_move"
+        app:showAsAction="always"/>
+
+</menu>

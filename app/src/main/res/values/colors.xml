@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#529CD3</color>
+    <!--color name="colorPrimaryDark">#00574B</color-->
+    <color name="colorPrimaryDark">#1F84C0</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="canvas_background">#1F84C0</color>
+    <color name="radio_button_pressed">#60B9EE</color>
+    <color name="red_circle_color">#FF0000</color>
+    <color name="yellow_circle_color">#FFFF00</color>
+    <color name="red">#FF0000</color>
+    <color name="yellow">#FFFF00</color>
+</resources>

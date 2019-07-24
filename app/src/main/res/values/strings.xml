@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="first_turn">FIRST TURN</string>
+    <string name="first_turn_you">YOU</string>
+    <string name="first_turn_friend">FRIEND</string>
+    <string name="app_name">Connect 4</string>
+    <string name="choose_your_color">CHOOSE YOUR COLOR</string>
+    <string name="play_button">Play</string>
+    <string name="restart">Restart Game?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="back">Exit to Menu?</string>
+    <string name="undo_move">Undo Move</string>
+    <string name="friend">FRIEND</string>
+    <string name="you">YOU</string>
+</resources>
