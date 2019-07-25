@@ -81,12 +81,31 @@ public class GamePlayController {
         return EMPTY_SLOT; // no winner found
     }
 
+    public void check_draw()
+    {
+        boolean drawFlag=true;
+        for (int j=0;j<6;j++)
+        {
+            for (int i=0;i<7;i++)
+            {
+                if (locationGridArray.circles.get(locationGridArray.loc[j][i]).getPlayer()==0){
+                    drawFlag=false;
+                    break;
+                }
+
+            }
+        }
+        if (drawFlag)
+            rule.setDraw(true);
+        else rule.setDraw(false);
+    }
+
 
     public void undo_move(GameView gameView)
     {
         int last_move=rule.get_moves();
         boolean done=false;
-        if (!rule.getWin()) {
+        if (!rule.getWin() && !rule.getDraw()) {
             for (int i = 0; !done && last_move != -1; i++) {
                 Location obj = locationGridArray.circles.get(locationGridArray.loc[i][last_move]);
                 if (obj.getPlayer() == Player.PLAYER_1) {

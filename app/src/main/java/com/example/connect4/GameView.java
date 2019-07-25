@@ -143,6 +143,7 @@ public class GameView extends View {
         canvas.drawCircle(locationGridArray.circles.get(locationGridArray.loc[0][6]).getLoc_x(), radiusX-5, rule.getTurn()==Player.PLAYER_2? radiusX-15:radiusX-30, player_2 );
         canvas.drawText("FRIEND", locationGridArray.circles.get(locationGridArray.loc[0][6]).getLoc_x()-50, (float)2.5*radiusX, text_paint);
         if (rule.getWin())canvas.drawText(rule.getWinner()==Player.PLAYER_1? "YOU WIN":"FRIEND WINS", locationGridArray.circles.get(locationGridArray.loc[0][rule.getWinner()==Player.PLAYER_2? 1:2]).getLoc_x(), locationGridArray.circles.get(locationGridArray.loc[0][2]).getLoc_y()-100, winner_text );
+        if (rule.getDraw())canvas.drawText("DRAW", locationGridArray.circles.get(locationGridArray.loc[0][2]).getLoc_x(), locationGridArray.circles.get(locationGridArray.loc[0][2]).getLoc_y()-100, winner_text/*draw_text*/);
 
 
         for(int j=0;j<6;j++)
@@ -227,7 +228,7 @@ public class GameView extends View {
             width_ratio=getWidth()/x;
 
             Log.d("msg", "ontouchevent width_ratio - "+width_ratio);
-            if (!rule.getWin()) {
+            if (!rule.getWin() || !rule.getDraw()) {
                 if (y > 415) {
                     if (width_ratio <= 50 && width_ratio >= 8)
 
@@ -264,6 +265,7 @@ public class GameView extends View {
                         rule.setWinner(2);
                         ta_da.start();
                     }
+                    gamePlayController.check_draw();
 
 
                     invalidate();

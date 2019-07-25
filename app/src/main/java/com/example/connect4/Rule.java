@@ -14,6 +14,7 @@ public class Rule implements Serializable {
     private int turn;
     private int player_1_color, player_2_color;
     private boolean isWin=false;
+    private boolean isDraw=false;
     private Stack<Integer> moves=new Stack<>();
     private int winner=0;   // 0 means no winner
 
@@ -90,4 +91,12 @@ public class Rule implements Serializable {
     public void setWinner(int winner) {this.winner = winner;}
 
     public int getWinner() {return winner;}
+
+    public void setDraw(boolean draw) {
+        isDraw = draw;
+    }
+
+    public boolean getDraw(){
+        return this.isDraw;
+    }
 }
